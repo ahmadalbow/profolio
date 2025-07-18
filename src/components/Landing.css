@@ -1,0 +1,57 @@
+canvas {
+  height: 40rem !important;
+  width: fit-content !important;
+}
+.trans-container {
+  position: relative;
+}
+.black-full {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  opacity: 0;
+}
+.landing-container {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.landing-about {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--light-gray);
+}
+.landing-nav-link {
+  color: #828181; /* Default gray color for all links */
+  text-decoration: none; /* Remove underline by default */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+@media (max-width: 992px) {
+  /* Remove fixed height from navbar */
+  .navbar {
+    height: auto;
+  }
+
+  .landing-about {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--light-gray);
+  }
+}
+.landing-about .nav-link {
+  color: var(--light-gray);
+}
+.landing-about .nav-link:hover {
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+}

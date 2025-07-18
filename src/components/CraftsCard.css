@@ -1,0 +1,80 @@
+.border-gradient {
+  border: 2px solid transparent; /* or #ccc, etc. */
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+.svg-container {
+  position: relative; /* This allows ::before to be positioned inside this container */
+  padding: 3rem 5rem;
+
+  /* 1) Omit z-index here or keep it at default 'auto' */
+  /* z-index: auto; */
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.svg-container::before,
+.svg-container::after {
+  content: "";
+  position: absolute;
+  /* 2) Make it bigger or offset it so you see the edges */
+  top: 50%;
+  left: 50%;
+  padding: 2px;
+  box-sizing: content-box;
+  height: 100%;
+  width: 100%;
+  translate: -50% -50%;
+
+  /* 3) The color/gradient behind */
+  background-image: conic-gradient(
+    from var(--angle),
+    #ffcc00,
+    #ff3b30,
+    violet,
+    #ff2d55,
+    #ffcc00
+  );
+  animation: 3s spin linear infinite;
+
+  /* 4) Negative z-index so it's *behind* container content */
+  z-index: 0;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 350deg;
+  }
+}
+.svg-container::before {
+  transition: all 1000ms;
+  filter: blur(0rem);
+  opacity: 0.4;
+}
+
+.svg-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* 2) Make it bigger or offset it so you see the edges */
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: linear-gradient(135deg, #000000, #1f1e22);
+}
