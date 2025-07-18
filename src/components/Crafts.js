@@ -42,7 +42,14 @@ const Crafts = () => {
     <div className="crafts-container ">
       <div className="container">
         <div className="crafts-header text-center ">CRAFTS</div>
-        <CraftsCard></CraftsCard>
+        <CraftsCard
+          company="FRAUNHOFER"
+          title="Umbrella"
+          description={
+            "A Platform That manage tens of the most complicated tools in the semi-conductors World"
+          }
+          imageSrc={"/img/umbrella.svg"}
+        ></CraftsCard>
       </div>
     </div>
   );
