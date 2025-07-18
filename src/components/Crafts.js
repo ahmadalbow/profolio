@@ -13,7 +13,7 @@ const Crafts = () => {
       start: "bottom+=100 center", // when the bottom of the landing container hits the top of the viewport
       onEnter: () => {
         gsap.to([".crafts-container"], {
-          backgroundColor: "#000",
+          opacity: 1,
           duration: 0.5,
           ease: "power1.out",
         });
@@ -24,12 +24,12 @@ const Crafts = () => {
         });
       },
       onLeaveBack: () => {
-        gsap.to([".crafts-container"], {
-          backgroundColor: "#fefefe",
+        gsap.to([".black-full"], {
+          opacity: 0,
           duration: 0.5,
           ease: "power1.out",
         });
-        gsap.to([".black-full"], {
+        gsap.to([".crafts-container"], {
           opacity: 0,
           duration: 0.5,
           ease: "power1.out",
