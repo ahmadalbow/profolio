@@ -46,9 +46,11 @@ const Crafts = () => {
           company="FRAUNHOFER"
           title="Umbrella"
           description={
-            "A Platform That manage tens of the most complicated tools in the semi-conductors World"
+            "A web Platform That manage tens of the complicated tools in the semi-conductors World"
           }
           imageSrc={"/img/umbrella.svg"}
+          bwImages={["/img/u1.png", "/img/u2.png", "/img/u3.png"]}
+          colourImages={["/img/u4.png"]}
         ></CraftsCard>
       </div>
     </div>

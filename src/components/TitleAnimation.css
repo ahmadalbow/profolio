@@ -1,0 +1,23 @@
+.title-animation {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden; /* clip the off‑screen arrow */
+  width: 400px;
+}
+
+.letter {
+  display: inline-block;
+  will-change: transform, opacity, filter;
+}
+
+/* Arrow starts fully left of the h1 (–1.5em) and vertically centered */
+.arrow-icon {
+  position: absolute;
+  left: 0; /* anchor at the h1’s left edge */
+  top: 50%;
+  transform: translate(-1.5em, -50%); /* move left, then up 50% */
+  opacity: 0;
+  will-change: transform, opacity;
+  font-weight: 600;
+}
