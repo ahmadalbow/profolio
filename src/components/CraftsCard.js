@@ -8,6 +8,22 @@ import LiquidHoverImage from "./LiquidHoverImage";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/**
+ * A responsive card that showcases a craft project with an animated liquid‑wipe image.
+ *
+ * Props:
+ *  - company (string, required): Name shown above the title.
+ *  - title (string, required): Main title animated by <TitleAnimation>.
+ *  - description (string, required): Short descriptive text.
+ *  - imageSrc (string, required): Background image URL (decorative).
+ *  - imageAlt (string): Alt text for the background image.
+ *  - className (string): Additional card wrapper classes.
+ *  - bwSrc (string, required): B/W source passed to <LiquidHoverImage>.
+ *  - colorSrc (string, required): Color source passed to <LiquidHoverImage>.
+ *  - liquidWidth (number): Display width for <LiquidHoverImage> (defaults to 1000).
+ *  - liquidDuration (number): Animation duration (seconds) for <LiquidHoverImage> (defaults to 1).
+ *  - imagePosition ("left" | "right"): Place big image on the left (default) or right on ≥ md screens.
+ */
 const CraftsCard = ({
   company,
   title,
@@ -15,13 +31,17 @@ const CraftsCard = ({
   imageSrc,
   imageAlt = "",
   className = "",
+  bwSrc,
+  colorSrc,
+  liquidWidth = 1000,
+  liquidDuration = 1,
+  imagePosition = "left", // 'left' | 'right'
 }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
     const el = containerRef.current;
 
-    // example fade‑up on scroll
     gsap.fromTo(
       el,
       { autoAlpha: 0, y: 50 },
@@ -37,36 +57,46 @@ const CraftsCard = ({
     );
   }, []);
 
+  // Reverse flex direction at the md breakpoint when the user wants the image on the right.
+  const rowDirectionClass =
+    imagePosition === "right" ? "flex-md-row-reverse" : "";
+  const PicPos = imagePosition === "right" ? "end" : "start";
   return (
     <div
       ref={containerRef}
-      className={`crafts-card container-fluid min-vh-100 d-flex align-items-center text-white ${className}`}
+      className={`crafts-card container-fluid d-flex align-items-center text-white ${className}`}
     >
-      <div className="row w-100 justify-content-center px-3">
-        <div className="col-8 col-md-9 d-flex justify-content-center align-items-center p-4 mb-4 mb-md-0">
+      <div
+        className={`row w-100 justify-content-center px-3 ${rowDirectionClass}`}
+      >
+        {/* Image / illustration */}
+        <div
+          className={`col-8 col-md-8 d-flex justify-content-${PicPos} align-items-center p-4 mb-4 mb-md-0`}
+        >
           <div className="svg-container">
             <img src={imageSrc} alt={imageAlt} />
             <div className="svg-img">
               <LiquidHoverImage
-                bwSrc="/img/umbrella.svg"
-                colorSrc="/img/umbrella_colored.svg"
-                width={380} // pick display width; height auto‑computed
-                duration={1} // optional – seconds for full wipe
+                bwSrc={bwSrc}
+                colorSrc={colorSrc}
+                width={liquidWidth}
+                duration={liquidDuration}
               />
             </div>
           </div>
         </div>
 
+        {/* Copy */}
         <div className="col-12 col-md-2 d-flex flex-column justify-content-between">
           <div>
             <h2
-              className="text-uppercase mb-2 fs-6 text-secondary  gradient-text"
+              className="text-uppercase mb-2 fs-6 text-secondary gradient-text"
               style={{ letterSpacing: "0.2rem" }}
             >
               {company}
             </h2>
             <h1 className="mb-4 display-4">
-              <TitleAnimation text="Umbrella"> </TitleAnimation>{" "}
+              <TitleAnimation text={title} />
             </h1>
           </div>
           <h6
@@ -88,6 +118,19 @@ CraftsCard.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string,
   className: PropTypes.string,
+  bwSrc: PropTypes.string.isRequired,
+  colorSrc: PropTypes.string.isRequired,
+  liquidWidth: PropTypes.number,
+  liquidDuration: PropTypes.number,
+  imagePosition: PropTypes.oneOf(["left", "right"]),
+};
+
+CraftsCard.defaultProps = {
+  imageAlt: "",
+  className: "",
+  liquidWidth: 1000,
+  liquidDuration: 1,
+  imagePosition: "left",
 };
 
 export default CraftsCard;

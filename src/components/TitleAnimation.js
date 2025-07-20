@@ -11,24 +11,24 @@ const TitleAnimation = ({ text }) => {
   const lettersRef = useRef([]);
   const arrowRef = useRef(null);
 
-  // Collect each letter’s span
+  /* collect each letter’s span */
   lettersRef.current = [];
   const addToRefs = (el) => {
-    if (el && !lettersRef.current.includes(el)) {
-      lettersRef.current.push(el);
-    }
+    if (el && !lettersRef.current.includes(el)) lettersRef.current.push(el);
   };
 
   useEffect(() => {
-    // Scroll‑in animation
-    const entrance = gsap.timeline({
+    /* ─── scroll in / out ─── */
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 80%",
-        toggleActions: "restart none none none",
+        start: "top 65%", // tweak to taste
+        toggleActions: "play reverse play reverse", // ↓ play | ↑ reverse
+        // markers: true                  // uncomment to debug
       },
     });
-    entrance.fromTo(
+
+    tl.fromTo(
       lettersRef.current,
       { x: -80, autoAlpha: 0 },
       {
@@ -37,40 +37,29 @@ const TitleAnimation = ({ text }) => {
         duration: 1,
         ease: "power3.out",
         stagger: 0.04,
-        clearProps: "filter",
+        clearProps: "transform,opacity",
       }
     );
 
-    // Hover animation: letters slide left, then arrow slides in
-    const hoverTl = gsap.timeline({
-      paused: true,
-      defaults: { ease: "power3.out" },
-    });
-    hoverTl.to(lettersRef.current, {
-      x: "+=50px",
-      duration: 0.5,
-      stagger: 0.03,
-    });
-    hoverTl.to(
-      arrowRef.current,
-      {
-        x: "0px", // back to translateX(0)
-        opacity: 1,
-        duration: 0.3,
-      },
-      "-=0.5"
-    );
+    /* ─── hover arrow ─── */
+    const hoverTl = gsap.timeline({ paused: true });
+    hoverTl
+      .to(lettersRef.current, { x: 50, duration: 0.5, stagger: 0.025 })
+      .to(arrowRef.current, { x: 0, opacity: 1, duration: 0.3 }, "-=0.5");
 
     const el = containerRef.current;
-    el.addEventListener("mouseenter", () => hoverTl.play());
-    el.addEventListener("mouseleave", () => hoverTl.reverse());
+    const play = () => hoverTl.play();
+    const rev = () => hoverTl.reverse();
+    el.addEventListener("mouseenter", play);
+    el.addEventListener("mouseleave", rev);
 
+    /* cleanup */
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-      entrance.kill();
+      el.removeEventListener("mouseenter", play);
+      el.removeEventListener("mouseleave", rev);
+      tl.kill();
       hoverTl.kill();
-      el.removeEventListener("mouseenter", () => hoverTl.play());
-      el.removeEventListener("mouseleave", () => hoverTl.reverse());
+      ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, [text]);
 

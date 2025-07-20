@@ -1,16 +1,6 @@
-.border-gradient {
-  border: 2px solid transparent; /* or #ccc, etc. */
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
+.crafts-card {
+  height: fit-content !important;
+  margin-top: 10rem;
 }
 .svg-container {
   position: relative; /* This allows ::before to be positioned inside this container */
@@ -78,6 +68,7 @@
   align-items: center;
   z-index: 1;
   background: linear-gradient(135deg, #000000, #1f1e22);
+  cursor: pointer;
 }
 
 .gradient-text {
@@ -95,18 +86,18 @@
   background-clip: text;
   -webkit-background-clip: text; /* Safari */
   -webkit-text-fill-color: #b5b5b5; /* initial solid fill */
-  animation: shimmerCycle 2.5s ease-in-out infinite;
+  animation: shimmerCycle 2s ease-in-out infinite;
 }
 @keyframes shimmerCycle {
   /* 0–66.6% (0–2s): solid gray, no movement */
   0%,
-  30.666% {
+  10.666% {
     background-position: 0% center;
     -webkit-text-fill-color: transparent;
   }
 
   /* 66.667%: switch to transparent to show gradient */
-  30.667% {
+  10.667% {
     -webkit-text-fill-color: transparent;
     background-position: 0% center;
   }
@@ -115,18 +106,5 @@
   100% {
     -webkit-text-fill-color: transparent;
     background-position: -150% center;
-  }
-}
-.memory-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(100%); /* initial B&W */
-  transition: filter 0.2s;
-}
-@media (prefers-reduced-motion: reduce) {
-  /* accessibility */ /* :contentReference[oaicite:9]{index=9} */
-  .memory-img {
-    animation: none !important;
   }
 }

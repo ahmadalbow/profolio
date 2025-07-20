@@ -49,8 +49,20 @@ const Crafts = () => {
             "A web Platform That manage tens of the complicated tools in the semi-conductors World"
           }
           imageSrc={"/img/umbrella.svg"}
-          bwImages={["/img/u1.png", "/img/u2.png", "/img/u3.png"]}
-          colourImages={["/img/u4.png"]}
+          bwSrc="/img/umbrella_gray.png"
+          colorSrc="/img/umbrella_big.png"
+          imagePosition="right"
+        ></CraftsCard>
+        <CraftsCard
+          company="INFRASOLID"
+          title="Mountain"
+          description={
+            "A web Platform That manage tens of the complicated tools in the semi-conductors World"
+          }
+          imageSrc={"/img/umbrella.svg"}
+          bwSrc="/img/mountainsg.png"
+          colorSrc="/img/mountainsc.png"
+          imagePosition="left"
         ></CraftsCard>
       </div>
     </div>

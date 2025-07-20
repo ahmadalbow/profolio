@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
+import "./LiquidHoverImage.css";
 
 /**
  * LiquidHoverImage – grayscale → colour with a 3‑second liquid wipe.
@@ -236,7 +237,11 @@ const LiquidHoverImage = ({
   }, [bwSrc, colorSrc, width, height, duration]);
 
   return (
-    <div ref={containerRef} className={className} style={{ lineHeight: 0 }} />
+    <div
+      ref={containerRef}
+      className={"test"}
+      style={{ lineHeight: 0, height: 500 }}
+    />
   );
 };
 
