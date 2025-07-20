@@ -44,12 +44,17 @@ const CraftsCard = ({
     >
       <div className="row w-100 justify-content-center px-3">
         <div className="col-8 col-md-9 d-flex justify-content-center align-items-center p-4 mb-4 mb-md-0">
-          <LiquidHoverImage
-            bwSrc="/img/umbrella.svg"
-            colorSrc="/img/umbrella_colored.svg"
-            width={380} // pick display width; height auto‑computed
-            duration={1} // optional – seconds for full wipe
-          />
+          <div className="svg-container">
+            <img src={imageSrc} alt={imageAlt} />
+            <div className="svg-img">
+              <LiquidHoverImage
+                bwSrc="/img/umbrella.svg"
+                colorSrc="/img/umbrella_colored.svg"
+                width={380} // pick display width; height auto‑computed
+                duration={1} // optional – seconds for full wipe
+              />
+            </div>
+          </div>
         </div>
 
         <div className="col-12 col-md-2 d-flex flex-column justify-content-between">
