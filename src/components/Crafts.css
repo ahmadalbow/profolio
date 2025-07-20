@@ -1,7 +1,7 @@
 .crafts-container {
-  height: 200vh;
   background-color: #000000;
   opacity: 0;
+  padding: 5rem;
 }
 .landing-container,
 .crafts-container {

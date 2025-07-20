@@ -22,8 +22,9 @@ const TitleAnimation = ({ text }) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 65%", // tweak to taste
-        toggleActions: "play reverse play reverse", // ↓ play | ↑ reverse
+        start: "top 80%", // play when the title's TOP hits 80 % of the viewport
+        end: "top 120%", // keep it active until the title's TOP hits the bottom
+        toggleActions: "play none none reverse", // ↓ play | ↑ reverse
         // markers: true                  // uncomment to debug
       },
     });

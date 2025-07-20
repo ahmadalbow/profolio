@@ -7,12 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Crafts from "./components/Crafts";
+import Footer from "./components/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
     <Header />
     <Landing />
     <Crafts />
+    <Footer />
   </div>
 );
 

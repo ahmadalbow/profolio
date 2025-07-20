@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 import "./CraftsCard.css";
 import TitleAnimation from "./TitleAnimation";
 import LiquidHoverImage from "./LiquidHoverImage";
@@ -23,6 +24,7 @@ gsap.registerPlugin(ScrollTrigger);
  *  - liquidWidth (number): Display width for <LiquidHoverImage> (defaults to 1000).
  *  - liquidDuration (number): Animation duration (seconds) for <LiquidHoverImage> (defaults to 1).
  *  - imagePosition ("left" | "right"): Place big image on the left (default) or right on ≥ md screens.
+ *  - link (string): Internal path that the user should be taken to when clicking the title or big image.
  */
 const CraftsCard = ({
   company,
@@ -35,7 +37,8 @@ const CraftsCard = ({
   colorSrc,
   liquidWidth = 1000,
   liquidDuration = 1,
-  imagePosition = "left", // 'left' | 'right'
+  imagePosition = "left",
+  link = null, // NEW
 }) => {
   const containerRef = useRef(null);
 
@@ -57,10 +60,23 @@ const CraftsCard = ({
     );
   }, []);
 
-  // Reverse flex direction at the md breakpoint when the user wants the image on the right.
   const rowDirectionClass =
     imagePosition === "right" ? "flex-md-row-reverse" : "";
   const PicPos = imagePosition === "right" ? "end" : "start";
+
+  // Helper to optionally wrap elements with a <Link>
+  const maybeWrapWithLink = (children) =>
+    link ? (
+      <Link
+        to={link}
+        className="text-decoration-none text-reset w-100 h-100 d-block"
+      >
+        {children}
+      </Link>
+    ) : (
+      children
+    );
+
   return (
     <div
       ref={containerRef}
@@ -73,17 +89,19 @@ const CraftsCard = ({
         <div
           className={`col-8 col-md-8 d-flex justify-content-${PicPos} align-items-center p-4 mb-4 mb-md-0`}
         >
-          <div className="svg-container">
-            <img src={imageSrc} alt={imageAlt} />
-            <div className="svg-img">
-              <LiquidHoverImage
-                bwSrc={bwSrc}
-                colorSrc={colorSrc}
-                width={liquidWidth}
-                duration={liquidDuration}
-              />
+          {maybeWrapWithLink(
+            <div className="svg-container cursor-pointer">
+              <img src={imageSrc} alt={imageAlt} />
+              <div className="svg-img">
+                <LiquidHoverImage
+                  bwSrc={bwSrc}
+                  colorSrc={colorSrc}
+                  width={liquidWidth}
+                  duration={liquidDuration}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Copy */}
@@ -95,9 +113,11 @@ const CraftsCard = ({
             >
               {company}
             </h2>
-            <h1 className="mb-4 display-4">
-              <TitleAnimation text={title} />
-            </h1>
+            {maybeWrapWithLink(
+              <h1 className="mb-4 display-4 cursor-pointer">
+                <TitleAnimation text={title} />
+              </h1>
+            )}
           </div>
           <h6
             className="mb-0 text-secondary gradient-text"
@@ -123,6 +143,7 @@ CraftsCard.propTypes = {
   liquidWidth: PropTypes.number,
   liquidDuration: PropTypes.number,
   imagePosition: PropTypes.oneOf(["left", "right"]),
+  link: PropTypes.string, // NEW
 };
 
 CraftsCard.defaultProps = {
@@ -131,6 +152,7 @@ CraftsCard.defaultProps = {
   liquidWidth: 1000,
   liquidDuration: 1,
   imagePosition: "left",
+  link: null,
 };
 
 export default CraftsCard;

@@ -1,0 +1,27 @@
+/* Light‐grey top border */
+.footer-divider {
+  border-top: 1px solid #444;
+  height: 2rem;
+}
+
+/* Home icon size + tint */
+.footer-home-icon {
+  font-size: 3rem;
+  color: #e5e5e5;
+}
+
+/* Link styling */
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-link:hover {
+  color: #adb5bd;
+}
+.footer {
+  padding: 5rem 0 !important;
+}
+.text-gray {
+  color: #717171;
+}

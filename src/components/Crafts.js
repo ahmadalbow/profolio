@@ -52,6 +52,18 @@ const Crafts = () => {
           bwSrc="/img/umbrella_gray.png"
           colorSrc="/img/umbrella_big.png"
           imagePosition="right"
+          link="test"
+        ></CraftsCard>
+        <CraftsCard
+          company="TU DRESDEN"
+          title="Ecocycle Navigator"
+          description={
+            "EcoCycle Navigator is a web‑based bicycle routing tool that scores Dresden routes by safety, air quality, noise, traffic, and elevation"
+          }
+          imageSrc={"/img/umbrella.svg"}
+          bwSrc="/img/navg.png"
+          colorSrc="/img/navc.png"
+          imagePosition="left"
         ></CraftsCard>
         <CraftsCard
           company="INFRASOLID"
@@ -62,6 +74,17 @@ const Crafts = () => {
           imageSrc={"/img/umbrella.svg"}
           bwSrc="/img/mountainsg.png"
           colorSrc="/img/mountainsc.png"
+          imagePosition="right"
+        ></CraftsCard>
+        <CraftsCard
+          company="FREELANCING"
+          title="Marina Portfolio"
+          description={
+            "A web Platform That manage tens of the complicated tools in the semi-conductors World"
+          }
+          imageSrc={"/img/umbrella.svg"}
+          bwSrc="/img/marinag.png"
+          colorSrc="/img/marinac.png"
           imagePosition="left"
         ></CraftsCard>
       </div>
