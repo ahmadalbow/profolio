@@ -36,7 +36,7 @@ export default function FooterWhite() {
                 "Marina Portfolio",
               ].map((item) => (
                 <li key={item}>
-                  <a href="#" className="footer-link">
+                  <a href="#" className="footer-white-link">
                     {item}
                   </a>
                 </li>
@@ -62,11 +62,11 @@ export default function FooterWhite() {
                     href={href}
                     target={href.startsWith("http") ? "_blank" : "_self"}
                     rel="noopener noreferrer"
-                    className="footer-link d-flex align-items-center"
+                    className="footer-white-link d-flex align-items-center"
                   >
                     {label}
                     <img
-                      src="/img/arrow.png"
+                      src="/img/arrowb.png"
                       alt="Logo"
                       style={{
                         width: "14px",

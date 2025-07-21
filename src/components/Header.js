@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-scroll";
 import "./Header.css";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const container = useRef();
@@ -80,13 +80,19 @@ const Header = () => {
   return (
     <div className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
-        <a className="navbar-brand" href="#home">
+        <Link
+          className="navbar-brand"
+          to=""
+          smooth={true}
+          duration={500}
+          onClick={toggleMenu}
+        >
           <img
             src="/img/logo.svg"
             alt="Logo"
             style={{ width: "38px", height: "auto" }}
           />
-        </a>
+        </Link>
 
         {/* Custom Button for Mobile */}
         <button
@@ -107,7 +113,7 @@ const Header = () => {
             <li className="nav-item">
               <Link
                 className="nav-link selected"
-                to="about"
+                to=""
                 smooth={true}
                 duration={500}
                 onClick={toggleMenu}
@@ -129,7 +135,7 @@ const Header = () => {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="contact"
+                to="about"
                 smooth={true}
                 duration={500}
                 onClick={toggleMenu}

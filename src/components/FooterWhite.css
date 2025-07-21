@@ -11,13 +11,13 @@
 }
 
 /* Link styling */
-.footer-link {
+.footer-white-link {
   color: black;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.footer-link:hover {
-  color: #adb5bd;
+.footer-white-link:hover {
+  color: #7a7a7a;
 }
 .footer {
   padding: 5rem 0 !important;
