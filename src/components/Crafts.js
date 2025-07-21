@@ -52,7 +52,7 @@ const Crafts = () => {
           bwSrc="/img/umbrella_gray.png"
           colorSrc="/img/umbrella_big.png"
           imagePosition="right"
-          link="test"
+          link="umbrella"
         ></CraftsCard>
         <CraftsCard
           company="TU DRESDEN"
@@ -64,6 +64,7 @@ const Crafts = () => {
           bwSrc="/img/navg.png"
           colorSrc="/img/navc.png"
           imagePosition="left"
+          link="ecocycle_navigator"
         ></CraftsCard>
         <CraftsCard
           company="INFRASOLID"
@@ -75,6 +76,7 @@ const Crafts = () => {
           bwSrc="/img/mountainsg.png"
           colorSrc="/img/mountainsc.png"
           imagePosition="right"
+          link="mountain"
         ></CraftsCard>
         <CraftsCard
           company="FREELANCING"
@@ -86,6 +88,7 @@ const Crafts = () => {
           bwSrc="/img/marinag.png"
           colorSrc="/img/marinac.png"
           imagePosition="left"
+          link="marina"
         ></CraftsCard>
       </div>
     </div>

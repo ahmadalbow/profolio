@@ -89,19 +89,21 @@ const CraftsCard = ({
         <div
           className={`col-8 col-md-8 d-flex justify-content-${PicPos} align-items-center p-4 mb-4 mb-md-0`}
         >
-          {maybeWrapWithLink(
-            <div className="svg-container cursor-pointer">
-              <img src={imageSrc} alt={imageAlt} />
-              <div className="svg-img">
-                <LiquidHoverImage
-                  bwSrc={bwSrc}
-                  colorSrc={colorSrc}
-                  width={liquidWidth}
-                  duration={liquidDuration}
-                />
+          <div className="svg-container cursor-pointer">
+            {maybeWrapWithLink(
+              <div>
+                <img src={imageSrc} alt={imageAlt} />
+                <div className="svg-img">
+                  <LiquidHoverImage
+                    bwSrc={bwSrc}
+                    colorSrc={colorSrc}
+                    width={liquidWidth}
+                    duration={liquidDuration}
+                  />
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Copy */}
@@ -152,7 +154,7 @@ CraftsCard.defaultProps = {
   liquidWidth: 1000,
   liquidDuration: 1,
   imagePosition: "left",
-  link: null,
+  link: "zr",
 };
 
 export default CraftsCard;

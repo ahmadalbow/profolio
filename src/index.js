@@ -1,24 +1,19 @@
+// index.js  ✅ clean version
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom"; // ← MOVE UP
 import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
-import Landing from "./components/Landing";
-import Crafts from "./components/Crafts";
-import Footer from "./components/Footer";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <div>
-    <Header />
-    <Landing />
-    <Crafts />
-    <Footer />
-  </div>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
