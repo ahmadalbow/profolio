@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import Crafts from "./components/Crafts";
 import Footer from "./components/Footer";
 import About from "./components/About";
+
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 function Layout() {

@@ -140,7 +140,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   `nav-link${isActive ? " selected" : ""}`
                 }
-                to="about"
+                to="/about"
                 end
                 smooth={true}
                 duration={500}
