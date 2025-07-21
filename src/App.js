@@ -5,13 +5,14 @@ import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Crafts from "./components/Crafts";
 import Footer from "./components/Footer";
-
+import About from "./components/About";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 function Layout() {
   return (
     <>
       <Header />
       <Outlet />
-      <Footer />
     </>
   );
 }
@@ -21,16 +22,21 @@ function Home() {
     <>
       <Landing />
       <Crafts />
+      <Footer />
     </>
   );
 }
 function App() {
+  const location = useLocation();
   return (
-    <Routes>
-      <Route element={<Layout />}>
+    <div>
+      <Layout></Layout>
+      <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
-      </Route>
-    </Routes>
+        <Route path="/about" element={<About />} />
+        <Route index element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 

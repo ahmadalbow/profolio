@@ -1,0 +1,23 @@
+/* MathSection.css
+   ─────────────────────────────────────────────────────────────── */
+
+/* scale the illustration sensibly and keep its gradient crisp */
+.math-illustration {
+  max-width: 100%; /* adjust if you need it bigger / smaller */
+  height: auto;
+  margin-top: 5rem !important;
+}
+
+/* subtle bolt under the author’s dash could go here if you want more flair */
+.ahmad-qoute {
+  font-size: 1rem;
+  color: #000;
+}
+.math-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #444444;
+  margin-top: 3rem !important;
+  max-width: 48rem;
+}

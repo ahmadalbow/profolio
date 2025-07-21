@@ -1,0 +1,71 @@
+/* Skills.css
+   ──────────────────────────────────────────────────────────────── */
+
+/* thin grey rule (top & bottom) */
+.skills-divider {
+  border-top: 1px solid #d9d9d9;
+  opacity: 1; /* override Bootstrap fade */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* round icon frame */
+.icon-wrapper {
+  width: 172px;
+  height: 172px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.icon-wrapper img {
+  width: 63px;
+  height: auto;
+}
+
+/* “Show more” centred with lines left & right */
+.show-more-wrapper {
+  /* …your current rules… */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  height: fit-content;
+  z-index: 100;
+  padding: 0 1rem;
+  background-color: white;
+
+  /* 🔽  NEW — centre the whole wrapper */
+  left: 50%; /* push midpoint to centre of parent */
+  transform: translateX(-50%); /* pull wrapper back by half its own width */
+}
+
+.show-more-btn {
+  color: rgb(61, 61, 61);
+  font-size: 1.2rem;
+}
+.show-more-btn:hover {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+.show-more-wrapper::before,
+.show-more-wrapper::after {
+  content: \"\";
+  flex: 1 1 120px; /* adjustable line length */
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.section-container .sec-title {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5rem !important;
+}
+
+.skills-section {
+  padding-bottom: 6rem !important;
+}

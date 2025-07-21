@@ -1,0 +1,10 @@
+.text-animation {
+  width: 100%; /* span the full width of its container */
+  white-space: normal; /* allow wrapping at real spaces */
+  overflow-wrap: break-word; /* fallback if one word is too long */
+}
+
+.letter {
+  display: inline-block; /* keeps individual letters together */
+  will-change: transform, opacity;
+}
