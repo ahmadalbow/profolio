@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Header.css";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const container = useRef();
@@ -82,7 +82,7 @@ const Header = () => {
       <div className="container">
         <Link
           className="navbar-brand"
-          to=""
+          to="/"
           smooth={true}
           duration={500}
           onClick={toggleMenu}
@@ -111,15 +111,18 @@ const Header = () => {
         >
           <ul className="navbar-nav ms-auto" ref={container}>
             <li className="nav-item">
-              <Link
-                className="nav-link selected"
-                to=""
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " selected" : ""}`
+                }
+                to="/"
+                end
                 smooth={true}
                 duration={500}
                 onClick={toggleMenu}
               >
                 Projects
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
               <Link
@@ -133,15 +136,18 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " selected" : ""}`
+                }
                 to="about"
+                end
                 smooth={true}
                 duration={500}
                 onClick={toggleMenu}
               >
-                About
-              </Link>
+                about
+              </NavLink>
             </li>
             <li className="nav-item">
               <Link
