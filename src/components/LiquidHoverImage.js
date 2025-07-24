@@ -22,6 +22,7 @@ const LiquidHoverImage = ({
   const rendererRef = useRef();
   const frameIdRef = useRef();
   const animatingRef = useRef(false);
+  const tweenRef = useRef(null);
 
   /*───────────────────────────  Shaders  ───────────────────────────*/
   const vertexShader = `
@@ -141,8 +142,7 @@ const LiquidHoverImage = ({
     const stopRenderLoop = () => {
       animatingRef.current = false;
       cancelAnimationFrame(frameIdRef.current);
-      // final render to ensure crisp final state
-      renderer.render(scene, camera);
+      renderer.render(scene, camera); // final crisp frame
     };
 
     // Load textures
@@ -192,24 +192,24 @@ const LiquidHoverImage = ({
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
 
+        // Single tween instance (paused) – play/reverse on hover
+        tweenRef.current = gsap.to(uniforms.u_progress, {
+          value: 1,
+          duration,
+          ease: "power2.out",
+          paused: true,
+          onComplete: stopRenderLoop,
+          onReverseComplete: stopRenderLoop,
+        });
+
         const onEnter = () => {
           startRenderLoop();
-          gsap.to(uniforms.u_progress, {
-            value: 1,
-            duration,
-            ease: "power2.out",
-            onComplete: stopRenderLoop,
-          });
+          tweenRef.current.play();
         };
 
         const onLeave = () => {
           startRenderLoop();
-          gsap.to(uniforms.u_progress, {
-            value: 0,
-            duration,
-            ease: "power2.out",
-            onComplete: stopRenderLoop,
-          });
+          tweenRef.current.reverse();
         };
 
         container.addEventListener("mouseenter", onEnter);
@@ -222,6 +222,10 @@ const LiquidHoverImage = ({
         return () => {
           container.removeEventListener("mouseenter", onEnter);
           container.removeEventListener("mouseleave", onLeave);
+          if (tweenRef.current) {
+            tweenRef.current.kill();
+            tweenRef.current = null;
+          }
           stopRenderLoop();
           geometry.dispose();
           material.dispose();

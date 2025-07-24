@@ -136,10 +136,7 @@ const Mountain = () => {
       {/* Text animation */}
       <TextAnimation
         mode="words"
-        text=" I see math as an art. I love creating short, beautiful integrals and
-        series that are almost impossible to solve. I’ve published over 100 very
-        advanced problems in international math magazines like RMM, and 90% of
-        them remain unsolved by anyone else."
+        text=" Mountain is a web-based automation platform used in the production of infrared emitters. It integrates with a range of instruments—such as HMP4040 power supplies, spectrometers, and other devices—to execute complex multi-step processes. The system can control multiple devices in parallel, capture their measurement data, store it in a central database, and provide analytical dashboards for visualization."
         className="mx-auto umbrella-text"
         stagger={0.015}
         duration={0.7}

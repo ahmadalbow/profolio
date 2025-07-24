@@ -141,15 +141,14 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <Link
+              <a
+                href="/CV.pdf"
                 className="nav-link"
-                to="contact"
-                smooth={true}
-                duration={500}
+                download
                 onClick={toggleMenu}
               >
                 CV
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -80,7 +80,7 @@ const Marina = () => {
             <span className="umbrella-label">Company</span>
           </div>
           <TextAnimation
-            text="Infrasolid GmbH"
+            text="Freelancing"
             stagger={0.02}
             duration={0.5}
             className="umbrella-value"
@@ -140,10 +140,7 @@ const Marina = () => {
       </div>
       {/* Text animation */}
       <TextAnimation
-        text=" I see math as an art. I love creating short, beautiful integrals and
-        series that are almost impossible to solve. I’ve published over 100 very
-        advanced problems in international math magazines like RMM, and 90% of
-        them remain unsolved by anyone else."
+        text="A portfolio for a multilingual professional fluent in seven languages and seeking enhanced career opportunities. It opens with a creative landing page resembling a night sky filled with randomly generated dark gray words in varying sizes, refreshed on each visit. When the user hovers over a language, the background words brighten and are translated into that language. After a language is selected, the user is directed to the main page, which presents comprehensive information about her in a modern, clean, and creative design."
         className="mx-auto umbrella-text"
         stagger={0.002}
         duration={0.5}

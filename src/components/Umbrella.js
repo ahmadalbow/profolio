@@ -136,10 +136,7 @@ const Umbrella = () => {
       {/* Text animation */}
       <TextAnimation
         mode="words"
-        text=" I see math as an art. I love creating short, beautiful integrals and
-        series that are almost impossible to solve. I’ve published over 100 very
-        advanced problems in international math magazines like RMM, and 90% of
-        them remain unsolved by anyone else."
+        text="Umbrella is a full-stack web application that centralizes and streamlines measurement data workflows. It supports the entire process from data acquisition and parsing, through database storage, to interactive frontend visualization and offers features such as comparative analysis and plotting of measurement results.  "
         className="mx-auto umbrella-text"
         stagger={0.015}
         duration={0.7}

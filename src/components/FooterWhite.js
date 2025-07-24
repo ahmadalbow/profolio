@@ -30,14 +30,14 @@ export default function FooterWhite() {
             <h6 className="text-uppercase  mb-3 text-gray">Craft</h6>
             <ul className="list-unstyled mt-4 gap-3 d-flex flex-column">
               {[
-                "Umbrella",
-                "Ecocycle Navigator",
-                "Mountain",
-                "Marina Portfolio",
+                ["Umbrella", "/umbrella"],
+                ["Ecocycle Navigator", "/ecocycle_navigator"],
+                ["Mountain", "/mountain"],
+                ["Marina Portfolio", "/marina"],
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="footer-white-link">
-                    {item}
+                <li key={item[0]}>
+                  <a href={item[1]} className="footer-white-link">
+                    {item[0]}
                   </a>
                 </li>
               ))}
@@ -53,9 +53,12 @@ export default function FooterWhite() {
             <h6 className="text-uppercase  mb-3 text-gray">Contact</h6>
             <ul className="list-unstyled mt-4 gap-3 d-flex flex-column">
               {[
-                { label: "LinkedIn", href: "#" },
-                { label: "Read.cv", href: "#" },
-                { label: "Mail", href: "mailto:hello@example.com" },
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/in/ahmad-albow-692a2031a/",
+                },
+                { label: "Read.cv", href: "/CV.pdf" },
+                { label: "Mail", href: "mailto:ahmad.albow1729@gmail.com" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -63,6 +66,7 @@ export default function FooterWhite() {
                     target={href.startsWith("http") ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                     className="footer-white-link d-flex align-items-center"
+                    download={href.startsWith("/CV.")}
                   >
                     {label}
                     <img

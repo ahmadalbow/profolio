@@ -70,7 +70,7 @@ const Crafts = () => {
           company="INFRASOLID"
           title="Mountain"
           description={
-            "A web Platform That manage tens of the complicated tools in the semi-conductors World"
+            "A web platform that controls multiple devices to automate complex processes involved  in  the manufacturing of infrared emitters."
           }
           imageSrc={"/img/umbrella.svg"}
           bwSrc="/img/mountainsg.png"
@@ -82,7 +82,7 @@ const Crafts = () => {
           company="FREELANCING"
           title="Marina Portfolio"
           description={
-            "A web Platform That manage tens of the complicated tools in the semi-conductors World"
+            "A personal portfolio showcasing a talented multilingual professional fluent in seven languages"
           }
           imageSrc={"/img/umbrella.svg"}
           bwSrc="/img/marinag.png"

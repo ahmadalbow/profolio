@@ -80,7 +80,7 @@ const EcoCycleNav = () => {
             <span className="umbrella-label">Company</span>
           </div>
           <TextAnimation
-            text="Infrasolid GmbH"
+            text="TU Dresden"
             stagger={0.02}
             duration={0.5}
             className="umbrella-value"
@@ -92,7 +92,7 @@ const EcoCycleNav = () => {
             <span className="umbrella-label">Location &amp; Year</span>
           </div>
           <TextAnimation
-            text="Dresden © 2024"
+            text="Dresden © 2025"
             stagger={0.02}
             duration={0.5}
             className="umbrella-value"
@@ -140,10 +140,7 @@ const EcoCycleNav = () => {
       </div>
       {/* Text animation */}
       <TextAnimation
-        text=" I see math as an art. I love creating short, beautiful integrals and
-        series that are almost impossible to solve. I’ve published over 100 very
-        advanced problems in international math magazines like RMM, and 90% of
-        them remain unsolved by anyone else."
+        text="EcoCycle Navigator is an intelligent bicycle routing platform that helps riders choose not just the fastest path, but the healthiest and safest. For any start–end pair in Dresden, it evaluates multiple route options using real accident records, live traffic flow, air‑quality data, road‑traffic noise, and elevation profile. Each segment is scored and visualised in an interactive map, enabling informed trade‑offs between speed, comfort, and exposure. The modular design can be extended to larger regions with compatible open datasets."
         className="mx-auto umbrella-text"
         stagger={0.002}
         duration={0.5}
