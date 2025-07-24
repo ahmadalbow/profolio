@@ -5,7 +5,6 @@ import {
   Text,
   CubeCamera,
 } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
 import gsap from "gsap";
 
 export default function Model({ containerWidth }) {
