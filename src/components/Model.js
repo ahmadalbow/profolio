@@ -11,7 +11,6 @@ import gsap from "gsap";
 export default function Model({ containerWidth }) {
   const { nodes } = useGLTF("/medias/imagin4.glb");
   const torus = useRef(null);
-  const { viewport } = useThree();
 
   // Use a base width (design reference)
   const baseWidth = 200;
