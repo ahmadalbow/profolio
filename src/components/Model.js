@@ -25,8 +25,6 @@ export default function Model({ containerWidth }) {
     : minScaleFactor;
 
   // Compute the top edge of the viewport in world units
-  const topEdge = viewport.height / 2;
-  const verticalOffset = 3;
 
   // Conditional text scale for "Full Stack Developer"
   const developerTextScale =

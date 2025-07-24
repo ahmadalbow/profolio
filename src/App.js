@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -10,7 +9,7 @@ import Umbrella from "./components/Umbrella";
 import Mountain from "./components/Mountain";
 import EcoCycleNav from "./components/EcoCycleNav.js";
 import Marina from "./components/Marina.js";
-import { AnimatePresence } from "framer-motion";
+
 import { useLocation } from "react-router-dom";
 function Layout() {
   return (

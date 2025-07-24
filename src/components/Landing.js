@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
 import "./Landing.css";
 import { Link } from "react-scroll";
-import { div } from "three/src/nodes/TSL.js";
+
 export default function Landing() {
   const containerRef = useRef();
   const [containerWidth, setContainerWidth] = useState(0);
