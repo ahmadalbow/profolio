@@ -138,3 +138,11 @@
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg);
 }
+.lab-disabled {
+  cursor: not-allowed;
+}
+
+.lab-disabled:hover {
+  text-decoration: none;
+  cursor: not-allowed;
+}

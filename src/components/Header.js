@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Header.css";
 import { gsap } from "gsap";
 import { NavLink, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const container = useRef();
@@ -9,6 +10,7 @@ const Header = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const tl = useRef();
   const firstRender = useRef(true);
+  const location = useLocation(); // ← new
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -125,29 +127,18 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                to="projects"
-                smooth={true}
-                duration={500}
-                onClick={toggleMenu}
-              >
-                Lab
-              </Link>
+              <span className="nav-link lab-disabled">Lab</span>
             </li>
             <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  `nav-link${isActive ? " selected" : ""}`
-                }
-                to="/about"
-                end
-                smooth={true}
-                duration={500}
+              <a
+                href="/about"
+                className={`nav-link${
+                  location.pathname === "/about" ? " selected" : ""
+                }`}
                 onClick={toggleMenu}
               >
-                about
-              </NavLink>
+                About
+              </a>
             </li>
             <li className="nav-item">
               <Link

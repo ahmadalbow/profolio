@@ -1,0 +1,56 @@
+/* Container tweaks */
+.umbrella-section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Title */
+.umbrella-title {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Meta labels + values */
+.umbrella-label {
+  display: inline-block;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.umbrella-meta .umbrella-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.umbrella-meta {
+  margin-top: 5rem;
+}
+/* Image styling */
+.umbrella-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.line-bottom {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.umbrella-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #444444;
+  margin-top: 5rem !important;
+  max-width: 48rem;
+}
+.skills-cont {
+  margin-top: 3rem;
+}

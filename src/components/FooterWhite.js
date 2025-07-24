@@ -91,8 +91,8 @@ export default function FooterWhite() {
               © 2025 Ahmad Albow. All Rights Reserved.
             </p>
             <p className="small text-gray mb-0">
-              Made with <i className="bi bi-heart-fill"></i> and Milk
-              Coffee&nbsp;(120 % sugar).
+              Made with <i className="bi bi-heart-fill"></i>{" "}
+              and&nbsp;MilkCoffee&nbsp;(120 % sugar).
             </p>
           </Col>
         </Row>

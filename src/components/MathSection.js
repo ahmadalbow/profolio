@@ -21,7 +21,7 @@ export default function MathSection() {
       {/* ── Quote ─────────────────────────────────────────────────── */}
       <figure className="mx-auto" style={{ maxWidth: "38rem" }}>
         <blockquote className="blockquote fst-italic text-muted mb-3">
-          “I looked at my mathematical problems the same way
+          “I look at my mathematical problems the same way
           Leonardo&nbsp;da&nbsp;Vinci looked at his Mona Lisa.”
         </blockquote>
         <figcaption className="blockquote-footer mb-0 fw-semibold ahmad-qoute">
