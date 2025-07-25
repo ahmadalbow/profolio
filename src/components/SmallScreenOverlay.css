@@ -1,0 +1,21 @@
+.small-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  text-align: center;
+  padding: 1rem;
+}
+
+.small-screen-overlay i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
