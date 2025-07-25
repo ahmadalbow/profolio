@@ -16,7 +16,7 @@ const SmallScreenOverlay = () => {
   return (
     <div className="small-screen-overlay">
       <img
-        src="/img/logo_W.svg"
+        src="/img/logo_w.svg"
         alt="Logo"
         style={{ width: "70px", height: "auto", marginBottom: "3rem" }}
       />
