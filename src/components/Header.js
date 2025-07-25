@@ -150,7 +150,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <a
-                href="/cert.pdf"
+                href="/Certificates.pdf"
                 className="nav-link"
                 download
                 onClick={toggleMenu}
