@@ -42,15 +42,15 @@ export default function Landing() {
           </Canvas>
           <div className="landing-about">
             <p>I simplify, I humanize.</p>
-            <Link
+            <a
               className="landing-nav-link "
-              to="about"
+              href="/about"
               smooth={true}
               duration={500}
             >
               <span style={{ textDecoration: "underline" }}>More about me</span>{" "}
               <span style={{ textDecoration: "none" }}>→</span>
-            </Link>
+            </a>
 
             <p></p>
           </div>
