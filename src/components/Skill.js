@@ -85,13 +85,13 @@ function Skills({ skills = DEFAULT_SKILLS, onShowMore }) {
       </div>
 
       <div className="show-more-wrapper d-flex align-items-center justify-content-center mt-5">
-        <button
+        <a
           type="button"
           className="btn btn-link text-decoration-none show-more-btn p-0"
-          onClick={onShowMore}
+          href="/CV.pdf"
         >
           See more
-        </button>
+        </a>
       </div>
       <hr className="skills-divider mt-3" />
     </section>
