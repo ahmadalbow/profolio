@@ -9,6 +9,7 @@ import Umbrella from "./components/Umbrella";
 import Mountain from "./components/Mountain";
 import EcoCycleNav from "./components/EcoCycleNav.js";
 import Marina from "./components/Marina.js";
+import SmallScreenOverlay from "./components/SmallScreenOverlay";
 
 import { useLocation } from "react-router-dom";
 function Layout() {
@@ -33,6 +34,7 @@ function App() {
   const location = useLocation();
   return (
     <div>
+      <SmallScreenOverlay />
       <Layout></Layout>
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
