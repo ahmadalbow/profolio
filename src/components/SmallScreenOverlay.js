@@ -18,7 +18,7 @@ const SmallScreenOverlay = () => {
       <img
         src="/img/logo_w.svg"
         alt="Logo"
-        style={{ width: "70px", height: "auto", marginBottom: "3rem" }}
+        style={{ width: "72px", height: "auto", marginBottom: "3rem" }}
       />
       <p>You need a bigger screen to view this website.</p>
     </div>
