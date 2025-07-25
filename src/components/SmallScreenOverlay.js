@@ -6,7 +6,7 @@ const SmallScreenOverlay = () => {
   const [isSmall, setIsSmall] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => setIsSmall(window.innerWidth < 768);
+    const checkScreen = () => setIsSmall(window.innerWidth < 1249);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
@@ -15,7 +15,11 @@ const SmallScreenOverlay = () => {
   if (!isSmall) return null;
   return (
     <div className="small-screen-overlay">
-      <i className="fa-brands fa-apple"></i>
+      <img
+        src="/img/logo_W.svg"
+        alt="Logo"
+        style={{ width: "70px", height: "auto", marginBottom: "3rem" }}
+      />
       <p>You need a bigger screen to view this website.</p>
     </div>
   );
