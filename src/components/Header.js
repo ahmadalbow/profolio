@@ -78,6 +78,7 @@ const Header = () => {
       tl.current.reverse();
     }
   }, [isMenuOpen, isSmallScreen]);
+  const isKubusAnschreiben = location.pathname === "/Kubus-Anschreiben";
 
   return (
     <div className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -90,7 +91,7 @@ const Header = () => {
           onClick={toggleMenu}
         >
           <img
-            src="/img/logo.svg"
+            src={isKubusAnschreiben ? "/img/logo_green.svg" : "/img/logo.svg"}
             alt="Logo"
             style={{ width: "38px", height: "auto" }}
           />
