@@ -1,0 +1,26 @@
+.kubus-gred {
+  background: #121fcf;
+  background: linear-gradient(to right, #007733 0%, #8cc63f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.anschreiben-header {
+  font-size: 4rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+.position-title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #555555;
+  margin-top: 2rem !important;
+  max-width: 25rem;
+}
+.anschreiben-text {
+  font-size: 1rem;
+  color: #515151;
+  margin-top: 2rem;
+  white-space: pre-line;
+}

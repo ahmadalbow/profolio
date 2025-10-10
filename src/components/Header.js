@@ -139,12 +139,7 @@ const Header = () => {
             </li>
 
             <li className="nav-item">
-              <a
-                href="/CV.pdf"
-                className="nav-link"
-                download
-                onClick={toggleMenu}
-              >
+              <a href="/CV.pdf" className="nav-link" onClick={toggleMenu}>
                 CV
               </a>
             </li>
@@ -152,7 +147,6 @@ const Header = () => {
               <a
                 href="/Certificates.pdf"
                 className="nav-link"
-                download
                 onClick={toggleMenu}
               >
                 Certificates
