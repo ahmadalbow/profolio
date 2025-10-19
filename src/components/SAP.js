@@ -6,7 +6,7 @@ import TextAnimation_v from "./TextAnimation_v";
 import FooterWhite from "./FooterWhite";
 import "./Kubus.css";
 
-const Kubus = () => {
+const SAP = () => {
   // register ScrollTrigger once
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -17,9 +17,9 @@ const Kubus = () => {
       {/* Title */}
       <div className="mt-5 d-flex justify-content-between align-items-center">
         <div>
-          <h1 className="kubus-gred anschreiben-header"> Anschreiben</h1>
+          <h1 className="sap-gred anschreiben-header"> Anschreiben</h1>
           <TextAnimation
-            text="Trainee für Informationssicherheit & Datenschutz "
+            text="Full Stack Software Developer (Team Compass)"
             className=" position-title"
             direction="bottom"
             mode="words"
@@ -28,7 +28,7 @@ const Kubus = () => {
           ></TextAnimation>
         </div>
         <img
-          src="/img/kubus.svg"
+          src="/img/SAP.svg"
           alt="Logo"
           style={{ width: "30rem", height: "auto" }}
         />
@@ -36,49 +36,35 @@ const Kubus = () => {
       <div className="mt-5">
         <TextAnimation_v
           mode="words"
-          text="Sehr geehrter Herr Horn,"
+          text="Sehr geehrte Damen und Herren,"
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="mit großem Interesse bewerbe ich mich um die Stelle als Trainee für Informationssicherheit & Datenschutz bei der kubus IT."
+          text="mit großem Interesse bewerbe ich mich um die Stelle als Full Stack Software Developer im Team Compass bei Ihnen."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="In meiner bisherigen Arbeit beim Fraunhofer IPMS und bei der Infrasolid GmbH konnte ich 
-              umfassende praktische Erfahrung in der Entwicklung moderner Webanwendungen sammeln - 
-              von der Konzeption und Implementierung des Backends über die Datenbankarchitektur bis 
-              hin zur Gestaltung des Frontends. Mein Fokus lag dabei stets auf der Erstellung von 
-              nachvollziehbarem, wartbarem und stabilem Code. Diese Prinzipien bilden nicht nur die 
-              Grundlage qualitativ hochwertiger Software, sondern sind auch essenziell für sichere Systeme. "
+          text="	Ich habe Informatik an der TU Dresden studiert und erfolgreich abgeschlossen. Während des Studiums und meiner anschließenden Arbeit beim Fraunhofer IPMS und der Infrasolid GmbH konnte ich umfangreiche praktische Erfahrung in der Entwicklung und im Betrieb von Webanwendungen sammeln – von der Planung und Umsetzung bis zum produktiven Betrieb."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="Den Wunsch, mich beruflich in Richtung IT-Sicherheit und Datenschutz zu entwickeln, habe 
-              ich während meines Informatikstudiums an der TU Dresden entdeckt. Besonders das Modul 
-              „Betriebssysteme und Sicherheit“ hat mich begeistert. In diesem Zusammenhang wurde mir 
-              bewusst, dass es nicht nur relevant ist, Systeme zu entwickeln, sondern auch ein tiefes 
-              Verständnis für die Absicherung dieser Systeme zu entwickeln. Seitdem beschäftige ich mich 
-              immer wieder mit Themen wie Zugriffskontrolle, Verschlüsselung und sicheren 
-              Softwarearchitekturen, und möchte dieses Wissen nun gezielt vertiefen. "
+          text="	Bei der Infrasolid GmbH habe ich eine Automatisierungsplattform auf Basis von Django und React entwickelt, die verschiedene Messgeräte steuert, Daten automatisiert erfasst und zentral speichert. Diese Systeme laufen bis heute stabil im Betrieb. Beim Fraunhofer IPMS war ich als Werkstudent der Hauptentwickler für eine Anwendung zur Optimierung von Messdaten-Workflows und Visualisierung technischer Messdaten. "
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="Beim Fraunhofer IPMS war ich als Werkstudent der Hauptentwickler für ein größeres Projekt. 
-                Meine Zuständigkeit umfasste die Planung und Umsetzung einer Anwendung zur 
-                Optimierung von Messdaten-Workflows. Im Rahmen des Projekts habe ich die gesamte 
-                Pipeline von der Datenerfassung bis zur Visualisierung entwickelt."
+          text="	Im Rahmen dieser Projekte habe ich mit Docker und Docker Compose gearbeitet, CI/CD-Pipelines mit GitLab eingerichtet und Skripte in Python und Bash genutzt, um Abläufe zu automatisieren. Auch mit JavaScript, TypeScript, Node.js, REST-APIs und relationalen Datenbanken (PostgreSQL, MySQL) bin ich vertraut. Frontendseitig habe ich Erfahrung mit React und SCSS, was mir den Einstieg in Frameworks wie Angular leicht macht."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
@@ -94,18 +80,28 @@ Systeme werden bis heute erfolgreich im laufenden Betrieb eingesetzt. "
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="Ich arbeite gerne selbständig und analytisch, lerne schnell neue Technologien und habe 
-            Freude daran, mich in neue Themen einzuarbeiten - besonders, wenn es um technische Tiefe 
-            und Sicherheitsfragen geht. Die Möglichkeit, im Rahmen Ihres Trainee-Programms meine 
-            Kenntnisse zu vertiefen und zugleich praktische Einblicke in die Umsetzung zu gewinnen, 
-            reizt mich daher besonders.  "
+          text="	Besonders spannend an der ausgeschriebenen Position finde ich die Möglichkeit, an skalierbaren Anwendungen zu arbeiten, die komplexe Daten in verständliche und nutzbare Informationen umwandeln. Ich arbeite gerne analytisch und strukturiert, übernehme Verantwortung für meine Aufgaben und tausche mich im Team aus, um gute Lösungen zu finden. Qualität, klare Architektur und sauberes Testing sind mir dabei besonders wichtig."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="Ich würde mich sehr freuen, Sie kennenzulernen und mehr über die Trainee-Stelle bei Ihnen zu erfahren."
+          text="Ich freue mich darauf, in einem internationalen Umfeld wie SAP zu arbeiten, Neues zu lernen und mit einem engagierten Team an modernen, cloudbasierten Lösungen zu entwickeln."
+          className="anschreiben-text"
+          stagger={0.015}
+          duration={0.7}
+        ></TextAnimation_v>
+        <TextAnimation_v
+          mode="words"
+          text="	Mein Portfolio finden Sie unter ahmadalbow.com, dort können Sie sich ein Bild von meinen bisherigen Projekten machen."
+          className="anschreiben-text"
+          stagger={0.015}
+          duration={0.7}
+        ></TextAnimation_v>
+        <TextAnimation_v
+          mode="words"
+          text="	Ich würde mich sehr freuen, Sie kennenzulernen und mehr über die Position und das Team Compass zu erfahren."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
@@ -132,4 +128,4 @@ Systeme werden bis heute erfolgreich im laufenden Betrieb eingesetzt. "
   );
 };
 
-export default Kubus;
+export default SAP;

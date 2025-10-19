@@ -79,7 +79,18 @@ const Header = () => {
     }
   }, [isMenuOpen, isSmallScreen]);
   const isKubusAnschreiben = location.pathname === "/Kubus-Anschreiben";
-
+  const isSap = location.pathname === "/sap-anschreiben";
+  let logo = "";
+  switch (location.pathname) {
+    case "/sap-anschreiben":
+      logo = "logo_blue.svg";
+      break;
+    case "/Kubus-Anschreiben":
+      logo = "logo_green.svg";
+      break;
+    default:
+      logo = "logo.svg";
+  }
   return (
     <div className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
@@ -91,7 +102,7 @@ const Header = () => {
           onClick={toggleMenu}
         >
           <img
-            src={isKubusAnschreiben ? "/img/logo_green.svg" : "/img/logo.svg"}
+            src={"/img/" + logo}
             alt="Logo"
             style={{ width: "38px", height: "auto" }}
           />

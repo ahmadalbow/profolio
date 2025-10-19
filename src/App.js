@@ -11,6 +11,7 @@ import EcoCycleNav from "./components/EcoCycleNav.js";
 import Marina from "./components/Marina.js";
 import SmallScreenOverlay from "./components/SmallScreenOverlay";
 import Kubus from "./components/Kubus";
+import SAP from "./components/SAP.js";
 import { useLocation } from "react-router-dom";
 function Layout() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/ecocycle_navigator" element={<EcoCycleNav />} />
         <Route path="/marina" element={<Marina />} />
         <Route path="/Kubus-Anschreiben" element={<Kubus />} />
+        <Route path="/sap-anschreiben" element={<SAP />} />
       </Routes>
     </div>
   );
