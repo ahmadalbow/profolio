@@ -28,7 +28,7 @@ const Packwise = () => {
           ></TextAnimation>
         </div>
         <img
-          src="/img/Packwise.svg"
+          src="/img/packwise.svg"
           alt="Logo"
           style={{ width: "30rem", height: "auto" }}
         />
