@@ -24,6 +24,7 @@ const TextAnimation_v = ({
   duration = 0.5,
   stagger = 0.02,
   className = "",
+  space = 80,
 }) => {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -47,7 +48,7 @@ const TextAnimation_v = ({
         fromVars.y = -80;
         break;
       case "bottom":
-        fromVars.y = 80;
+        fromVars.y = space;
         break;
       default:
         fromVars.x = -80;
@@ -120,6 +121,7 @@ TextAnimation_v.defaultProps = {
   duration: 1,
   stagger: 0.04,
   className: "",
+  space: 80,
 };
 
 export default TextAnimation_v;

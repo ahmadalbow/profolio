@@ -10,6 +10,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.runds-gred {
+  background: #121fcf;
+  background: linear-gradient(to right, #004f78 0%, #009bea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .anschreiben-header {
   font-size: 4rem;
 }
@@ -28,5 +36,11 @@
   font-size: 1rem;
   color: #515151;
   margin-top: 2rem;
+  white-space: pre-line;
+}
+.anschreiben-point {
+  font-size: 1rem;
+  color: #515151;
+  margin-left: 1rem;
   white-space: pre-line;
 }

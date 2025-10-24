@@ -13,7 +13,9 @@ import SmallScreenOverlay from "./components/SmallScreenOverlay";
 import Kubus from "./components/Kubus";
 import SAP from "./components/SAP.js";
 import Packwise from "./components/Packwise.js";
+
 import { useLocation } from "react-router-dom";
+import RundS from "./components/RundS.js";
 function Layout() {
   return (
     <>
@@ -49,6 +51,7 @@ function App() {
         Packwise
         <Route path="/sap-anschreiben" element={<SAP />} />
         <Route path="/packwise-anschreiben" element={<Packwise />} />
+        <Route path="/R&S-anschreiben" element={<RundS />} />
       </Routes>
     </div>
   );
