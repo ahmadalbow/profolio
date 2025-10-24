@@ -69,7 +69,7 @@ const TextAnimation_v = ({
       duration,
       ease: "power3.out",
       stagger,
-      clearProps: "transform,opacity",
+      clearProps: "transform",
     });
 
     return () => {

@@ -51,7 +51,7 @@ function App() {
         Packwise
         <Route path="/sap-anschreiben" element={<SAP />} />
         <Route path="/packwise-anschreiben" element={<Packwise />} />
-        <Route path="/R&S-anschreiben" element={<RundS />} />
+        <Route path="/rohde-und-schwarz-anschreiben" element={<RundS />} />
       </Routes>
     </div>
   );
