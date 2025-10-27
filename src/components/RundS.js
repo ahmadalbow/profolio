@@ -44,7 +44,7 @@ const RundS = () => {
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
-          text="mit großem Interesse bewerbe ich mich um die Stelle als WebUI-Entwickler für Satellitenerfassungssysteme. Lassen Sie mich bitte überzeugen, warum ich ein passender Kandidat für die Stelle bin."
+          text="mit großem Interesse bewerbe ich mich um die Stelle als WebUI-Entwickler für Satellitenerfassungssysteme. Lassen Sie mich bitte überzeugen, warum ich die passende Person für die Stelle bin."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
@@ -162,20 +162,13 @@ Beim Fraunhofer-Institut habe ich in einem größeren Team gearbeitet, dessen Mi
           mode="words"
         ></TextAnimation_v>
         <TextAnimation_v
-          text="Ich weiß, Sie suchen wahrscheinlich jemanden mit Erfahrung in Node.js und Angular. Aber wissen Sie, wenn man die Struktur der Webentwicklung verstanden hat, kann man dieses Wissen schnell auf andere Frameworks übertragen. Ich habe bereits mehrjährige Erfahrung mit Django und React und habe sehr komplexe und große Projekte entwickelt. Ich werde auch Node.js und Angular vor Arbeitsbeginn lernen."
+          text="Ich weiß, Sie suchen wahrscheinlich jemanden mit beruflichen Erfahrung in Node.js und Angular. Aber wissen Sie, wenn man die Struktur der Webentwicklung verstanden hat, kann man dieses Wissen schnell auf andere Frameworks übertragen. Ich habe bereits mehrjährige Erfahrung mit Django und React und habe sehr komplexe und große Projekte entwickelt. Ich habe bereits mit Node.js und Angular gearbeitet und beide in privaten Projekten eingesetzt. Gerne zeige ich mein Können in einem Live-Coding während des Vorstellungsgesprächs oder bearbeite eine größere, von Ihnen gestellte Aufgabe, die ich Ihnen anschließend im Gespräch präsentiere."
           className="anschreiben-text"
           stagger={0.015}
           duration={0.7}
           space={30}
           direction="bottom"
           mode="words"
-        ></TextAnimation_v>
-        <TextAnimation_v
-          mode="words"
-          text="Um mein Interesse und meine Motivation zu zeigen, bin ich sogar bereit, bei Ihnen für zwei Wochen in Vollzeit unbezahlt zu arbeiten. Nur wenn Sie mit meiner Leistung sehr zufrieden sind, können Sie mich anschließend einstellen."
-          className="anschreiben-text"
-          stagger={0.015}
-          duration={0.7}
         ></TextAnimation_v>
         <TextAnimation_v
           mode="words"
